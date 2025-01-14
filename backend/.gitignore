@@ -1,6 +1,7 @@
 # Credits to "https://github.com/github/gitignore/tree/main"
 
 db/chroma_storage
+db/langchain_loader.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
