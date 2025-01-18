@@ -1,15 +1,38 @@
-# IDE directories
-.idea/
+# Python cache files and directories
+__pycache__/
+*.py[cod]
+
+# pytest cache
+.pytest_cache/
+
+# Visual Studio Code settings
 .vscode/
 
-# System files
-.DS_Store
-Thumbs.db
+# backend build artifacts or temporary files (if any)
+.backend/
 
-# Logs
+# log files
 logs/
 *.log
 
-# Temporary files
-tmp/
-temp/
+# poetry lock file (optional, if you don't want it in version control)
+poetry.lock
+
+# Docker-related temporary files
+docker-compose.override.yml
+.env
+
+# other temporary or local configuration files
+*.swp
+*.bak
+*.tmp
+*.DS_Store
+
+# Node.js or frontend-related
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# By specific folders or files (customize as needed)
+backend/temp/
+frontend/temp/

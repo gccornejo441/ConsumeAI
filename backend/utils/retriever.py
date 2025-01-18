@@ -4,6 +4,7 @@ def retrieve_relevant_docs(query, model, collection, top_k=20, threshold=1.0):
     with a specified similarity threshold.
     Returns a dictionary with the query and the retrieved documents.
     """
+    
     query_embedding = model.encode(query).tolist()
     results = collection.query(
         query_embeddings=[query_embedding],

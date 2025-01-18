@@ -11,6 +11,7 @@ collection = client.get_or_create_collection(name="domain_docs")
 
 model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
+
 @app.get("/query")
 def query_consume(user_query: str = Query(...)):
     """

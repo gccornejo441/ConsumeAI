@@ -3,7 +3,7 @@ name = "backend"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Gabriel Cornejo",email = "gcornejo441@gmail.com"}
+    {name = "gcornejo441",email = "gcornejo441@gmail.com"}
 ]
 license = {text = "MIT"}
 readme = "README.md"
@@ -16,6 +16,11 @@ dependencies = [
     "langchain-community (>=0.3.14,<0.4.0)",
     "langchain-unstructured (>=0.1.6,<0.2.0)",
     "unstructured[csv,docx] (>=0.16.13,<0.17.0)",
+    "transformers (>=4.48.0,<5.0.0)",
+    "termcolor (>=2.5.0,<3.0.0)",
+    "spacy (>=3.8.4,<4.0.0)",
+    "pytest (>=8.3.4,<9.0.0)",
+    "fpdf (>=1.7.2,<2.0.0)",
 ]
 
 [build-system]
