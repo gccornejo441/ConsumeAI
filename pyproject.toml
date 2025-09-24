@@ -1,35 +1,9 @@
 [project]
-name = "backend"
+name = "consumeai"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "gcornejo441",email = "gcornejo441@gmail.com"}
-]
-license = {text = "MIT"}
+description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.12"
 dependencies = [
-    "uvicorn (>=0.34.0,<0.35.0)",
-    "chromadb (>=0.6.2,<0.7.0)",
-    "sentence-transformers (>=3.3.1,<4.0.0)",
-    "unstructured[csv,docx] (>=0.16.13,<0.17.0)",
-    "transformers (>=4.48.0,<5.0.0)",
-    "termcolor (>=2.5.0,<3.0.0)",
-    "spacy (>=3.8.4,<4.0.0)",
-    "pytest (>=8.3.4,<9.0.0)",
-    "fastapi (>=0.115.11,<0.116.0)",
-    "ollama (>=0.4.7,<0.5.0)",
-    "pydantic (>=2.10.6,<3.0.0)",
+    "python-dotenv>=1.1.1",
 ]
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
-package-mode = false
-
-[tool.poetry.group.dev.dependencies]
-black = "^24.10.0"
-flake8 = "^7.1.1"
-isort = "^5.13.2"
