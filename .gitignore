@@ -36,3 +36,4 @@ yarn-error.log
 # By specific folders or files (customize as needed)
 backend/temp/
 frontend/temp/
+llm_cache.json
