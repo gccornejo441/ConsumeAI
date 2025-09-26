@@ -6,6 +6,7 @@ from datetime import datetime
 import logging
 
 from chat import chat_response
+from src.cli import initialize_cli
 
 load_dotenv()
 
@@ -81,13 +82,10 @@ def call_llm(
 
 def main():
     print("Calling LLM...")
-    parser = argparse.ArgumentParser(description="Call LLM with caching.")
-    parser.add_argument("--prompt", type=str, required=True, help="Prompt to send to the LLM.")
-    
-    args = parser.parse_args()
-    prompt = args.prompt
+    user_inputs = initialize_cli()
+    user_prompt = user_inputs.get("prompt")
 
-    res = call_llm(prompt, use_cache=True)
+    res = call_llm(user_prompt, use_cache=True)
     print(f"Response: {res}")
 
 if __name__ == "__main__":
