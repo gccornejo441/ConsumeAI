@@ -1,13 +1,23 @@
+import requests
 
+def request_page(url):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            return response.text
+    except requests.RequestException:
+        return None
 
-from utils.config import _file2dict, summarize_zip
-from utils.import_utils import import_modules_from_file
+def get_page_urls():
+    for i in range(1,2):
+        baseurl = 'https://www.facebook.com/{}'.format(i)
+        html = request_page(baseurl)
+        
+
 
 if __name__ == "__main__":
-    print(_file2dict("assets/agent.yaml"))
-    import_modules_from_file("main.py")
-    # summary_file = summarize_zip()
-    # if summary_file is None:
-    #     print("Error")
-    # else:
-    #     print(summary_file)
+    url = "https://google.com"
+    page_content = request_page(url)
+    print(page_content)
+
+

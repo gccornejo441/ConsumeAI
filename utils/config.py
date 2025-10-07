@@ -61,4 +61,13 @@ def summarize_zip() -> list[dict]:
 
     return summarizes
 
-# Load Adult form OpenML as a DataFrame
+def dict_zip(file="assets/agent.yaml"):
+    
+    filename = osp.basename(file)
+    file_ext = osp.splitext(filename)[1]
+
+    if not file_ext in ['.yaml', '.yml', 'json']:
+        raise ValueError('Only yaml or yml file is supported.')
+    
+    print(filename)
+    
